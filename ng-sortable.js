@@ -21,6 +21,7 @@
 	 * @property  {Object|Array}  models     List of items
 	 * @property  {number}        oldIndex   before sort
 	 * @property  {number}        newIndex   after sort
+	 * @property  {Object}        sortable   the sortable instance
 	 */
 
 
@@ -82,7 +83,8 @@
 							model: item || source && source.item(evt.item),
 							models: source && source.items(),
 							oldIndex: evt.oldIndex,
-							newIndex: evt.newIndex
+							newIndex: evt.newIndex,
+							sortable: sortable
 						});
 					}
 
