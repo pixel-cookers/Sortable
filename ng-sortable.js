@@ -119,6 +119,7 @@
 						}
 						else {
 							items.splice(newIndex, 0, items.splice(oldIndex, 1)[0]);
+							removed = null; // clean data from previous event
 						}
 
 						scope.$apply();
