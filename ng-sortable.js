@@ -65,10 +65,9 @@
 			// Export
 			return {
 				restrict: 'AC',
-				scope: { ngSortable: "=?" },
 				link: function (scope, $el, attrs) {
 					var el = $el[0],
-						options = scope.ngSortable || {},
+						options = scope.$eval(attrs.ngSortable) || {},
 						source = getSource(el),
 						watchers = [],
 						sortable
